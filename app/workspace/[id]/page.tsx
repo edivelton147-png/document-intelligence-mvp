@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WorkspaceInternalNav } from "@/components/workspace-internal-nav";
 import { getWorkspaceById, workspaces } from "@/lib/mock-data";
-import type { Workspace, WorkspaceDocument } from "@/types/workspace";
+import type { Workspace } from "@/types/workspace";
 
 const statusLabel: Record<Workspace["status"], string> = {
   draft: "Borrador",
@@ -10,7 +10,15 @@ const statusLabel: Record<Workspace["status"], string> = {
   planned: "Planificado"
 };
 
-const documentStatusMeta: Record<WorkspaceDocument["status"], { label: string; className: string }> = {
+type LocalWorkspaceDocument = {
+  name: string;
+  type: string;
+  date: string;
+  status: string;
+  priority: string;
+};
+
+const documentStatusMeta: Record<LocalWorkspaceDocument["status"], { label: string; className: string }> = {
   pending: {
     label: "Pendiente",
     className: "bg-slate-100 text-slate-600"
@@ -25,7 +33,7 @@ const documentStatusMeta: Record<WorkspaceDocument["status"], { label: string; c
   }
 };
 
-const priorityLabel: Record<WorkspaceDocument["priority"], string> = {
+const priorityLabel: Record<LocalWorkspaceDocument["priority"], string> = {
   high: "Alta",
   medium: "Media",
   low: "Baja"

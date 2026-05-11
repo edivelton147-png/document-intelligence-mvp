@@ -1,5 +1,31 @@
 export type WorkspaceStatus = "draft" | "ready" | "planned";
 
+export type WorkspaceDocumentStatus = "pending" | "reviewing" | "validated";
+
+export type WorkspaceDocumentPriority = "high" | "medium" | "low";
+
+export type WorkspaceDocument = {
+  id: string;
+  name: string;
+  type: string;
+  date: string;
+  status: WorkspaceDocumentStatus;
+  priority: WorkspaceDocumentPriority;
+};
+
+export type WorkspaceNote = {
+  id: string;
+  title: string;
+  body: string;
+  date: string;
+};
+
+export type WorkspaceActivity = {
+  id: string;
+  label: string;
+  date: string;
+};
+
 export type WorkspaceSection = {
   id: "documents" | "context" | "prompt" | "outputs" | "notes";
   label: string;
