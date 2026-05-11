@@ -12,11 +12,6 @@ export const workspaceSections: WorkspaceSection[] = [
     description: "Criterios, alcance y notas de referencia del workspace."
   },
   {
-    id: "prompt",
-    label: "Prompt",
-    description: "Guía manual para estructurar preguntas y revisiones humanas."
-  },
-  {
     id: "outputs",
     label: "Outputs",
     description: "Resultados, matrices y entregables producidos fuera de la app."

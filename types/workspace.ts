@@ -17,4 +17,9 @@ export type Workspace = {
   sections: WorkspaceSection[];
   status: WorkspaceStatus;
   focus: string;
+  icon: string;
+  lastUpdated: string;
+  documents: WorkspaceDocument[];
+  notes: WorkspaceNote[];
+  activity: WorkspaceActivity[];
 };
