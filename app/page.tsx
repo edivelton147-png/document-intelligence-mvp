@@ -14,13 +14,13 @@ export default function WorkspacesPage() {
               Inteligencia documental simple, personal y verificable.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600">
-              DocuLens empieza como un esqueleto limpio para organizar espacios de trabajo.
-              Todavía no incluye subida de documentos, autenticación, base de datos ni IA externa.
+              DocuLens organiza workspaces documentales con inventarios mock, notas de revisión
+              y actividad reciente. Sigue siendo local, simple y sin backend.
             </p>
           </div>
           <div className="rounded-3xl bg-ink px-6 py-5 text-white">
             <p className="text-sm text-slate-300">Estado del MVP</p>
-            <p className="mt-2 text-2xl font-semibold">Esqueleto inicial</p>
+            <p className="mt-2 text-2xl font-semibold">Flujo documental mock</p>
           </div>
         </div>
       </section>
