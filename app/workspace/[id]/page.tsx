@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WorkspaceInternalNav } from "@/components/workspace-internal-nav";
 import { getWorkspaceById, workspaces } from "@/lib/mock-data";
-import type { Workspace } from "@/types/workspace";
+import type { Workspace, WorkspaceDocument } from "@/types/workspace";
 
 const statusLabel: Record<Workspace["status"], string> = {
   draft: "Borrador",
@@ -10,7 +10,7 @@ const statusLabel: Record<Workspace["status"], string> = {
   planned: "Planificado"
 };
 
-const documentStatusMeta: Record<Workspace["documents"][number]["status"], { label: string; className: string }> = {
+const documentStatusMeta: Record<WorkspaceDocument["status"], { label: string; className: string }> = {
   pending: {
     label: "Pendiente",
     className: "bg-slate-100 text-slate-600"
@@ -25,7 +25,7 @@ const documentStatusMeta: Record<Workspace["documents"][number]["status"], { lab
   }
 };
 
-const priorityLabel: Record<Workspace["documents"][number]["priority"], string> = {
+const priorityLabel: Record<WorkspaceDocument["priority"], string> = {
   high: "Alta",
   medium: "Media",
   low: "Baja"
@@ -99,7 +99,7 @@ export default function WorkspacePage({ params }: { params: { id: string } }) {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slateblue">
             Resumen del flujo documental
           </p>
-          <p className="mt-3 max-w-4xl leading-7 text-slate-700">{workspace.flowSummary}</p>
+          <p className="mt-3 leading-7 text-slate-700">{workspace.flowSummary}</p>
         </div>
       </section>
 
