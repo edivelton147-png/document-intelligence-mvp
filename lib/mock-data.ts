@@ -83,7 +83,11 @@ export const workspaces: Workspace[] = [
       { id: "fen-act-1", label: "Se validó la matriz de riesgos", date: "Hoy" },
       { id: "fen-act-2", label: "Se agregó acta de coordinación", date: "Ayer" },
       { id: "fen-act-3", label: "Se actualizó el resumen documental", date: "08 mayo" }
-    ],
+    ]
+    documentCount: 0,
+    sections: workspaceSections,
+    status: "ready",
+    focus: "Gestión documental"
   },
   {
     id: "wash-tumbes",
@@ -144,7 +148,7 @@ export const workspaces: Workspace[] = [
       { id: "wash-act-1", label: "Se clasificaron brechas por distrito", date: "Hoy" },
       { id: "wash-act-2", label: "Se marcó diagnóstico como validado", date: "09 mayo" },
       { id: "wash-act-3", label: "Se añadió nota de revisión territorial", date: "07 mayo" }
-    ],
+    ]
   },
   {
     id: "tesis-agua-saneamiento",
@@ -205,7 +209,7 @@ export const workspaces: Workspace[] = [
       { id: "tesis-act-1", label: "Se actualizó marco teórico", date: "06 mayo" },
       { id: "tesis-act-2", label: "Se validó bibliografía base", date: "01 mayo" },
       { id: "tesis-act-3", label: "Se abrió nota metodológica", date: "28 abril" }
-    ],
+    ]
   },
   {
     id: "propuestas-tecnicas",
@@ -266,7 +270,7 @@ export const workspaces: Workspace[] = [
       { id: "prop-act-1", label: "Se cargaron términos de referencia", date: "Hoy" },
       { id: "prop-act-2", label: "Se creó matriz de cumplimiento", date: "08 mayo" },
       { id: "prop-act-3", label: "Se validó anexo de experiencia", date: "03 mayo" }
-    ],
+    ]
   }
 ];
 
