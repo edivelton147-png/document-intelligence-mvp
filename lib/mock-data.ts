@@ -83,7 +83,7 @@ export const workspaces: Workspace[] = [
       { id: "fen-act-1", label: "Se validó la matriz de riesgos", date: "Hoy" },
       { id: "fen-act-2", label: "Se agregó acta de coordinación", date: "Ayer" },
       { id: "fen-act-3", label: "Se actualizó el resumen documental", date: "08 mayo" }
-    ]
+    ],
     documentCount: 0,
     sections: workspaceSections,
     status: "ready",
