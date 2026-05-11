@@ -45,9 +45,7 @@ export default function WorkspacePage({ params }: { params: { id: string } }) {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slateblue">
             Resumen del flujo documental
           </p>
-          <p className="mt-3 leading-7 text-slate-700">
-            {workspace.flowSummary ?? "Flujo documental pendiente de definir para este workspace."}
-          </p>
+          <p className="mt-3 leading-7 text-slate-700">{workspace.documentFlowSummary}</p>
         </div>
       </section>
 

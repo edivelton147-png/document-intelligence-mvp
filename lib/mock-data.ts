@@ -36,7 +36,7 @@ export const workspaces: Workspace[] = [
     description:
       "Workspace para ordenar documentación, criterios técnicos y evidencias relacionadas con escenarios del Fenómeno El Niño 2026.",
     strictMode: true,
-    flowSummary:
+    documentFlowSummary:
       "Recolectar documentos fuente, validar relevancia manualmente, organizar hallazgos por tema y preparar outputs verificables para revisión final.",
     documentCount: 0,
     sections: workspaceSections
@@ -48,7 +48,7 @@ export const workspaces: Workspace[] = [
     description:
       "Espacio de trabajo para estructurar información territorial, diagnósticos WASH y notas operativas enfocadas en Tumbes.",
     strictMode: true,
-    flowSummary:
+    documentFlowSummary:
       "Separar insumos por fuente, contrastar datos críticos, sintetizar brechas y registrar decisiones humanas antes de producir entregables.",
     documentCount: 0,
     sections: workspaceSections
@@ -60,7 +60,7 @@ export const workspaces: Workspace[] = [
     description:
       "Workspace para organizar bibliografía, argumentos, metodología y notas de avance de una tesis sobre agua y saneamiento.",
     strictMode: false,
-    flowSummary:
+    documentFlowSummary:
       "Agrupar lecturas, extraer ideas clave, mantener trazabilidad de citas y consolidar notas para escritura académica posterior.",
     documentCount: 0,
     sections: workspaceSections
@@ -72,13 +72,13 @@ export const workspaces: Workspace[] = [
     description:
       "Área para preparar insumos, requisitos, matrices de cumplimiento y borradores de propuestas técnicas.",
     strictMode: true,
-    flowSummary:
+    documentFlowSummary:
       "Revisar bases, identificar requisitos, mapear evidencias disponibles y producir una estructura de respuesta validada manualmente.",
     documentCount: 0,
     sections: workspaceSections
   }
 ];
 
-export function getWorkspaceById(id: string): Workspace | undefined {
+export function getWorkspaceById(id: string) {
   return workspaces.find((workspace) => workspace.id === id);
 }

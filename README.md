@@ -9,10 +9,8 @@ Crear una base visual y técnica limpia para organizar workspaces documentales s
 ## Alcance actual
 
 - Layout general con sidebar.
-- Página principal `Workspaces` con datos mock/locales.
-- Tarjetas de workspaces para `FEN 2026`, `WASH Tumbes`, `Tesis Agua y Saneamiento` y `Propuestas Técnicas`.
-- Ruta dinámica `app/workspace/[id]` para visualizar dominio, descripción, modo estricto y flujo documental.
-- Páginas placeholder para documentos, contexto, prompt, outputs y notas.
+- Página principal `Workspaces`.
+- Tarjetas estáticas de workspaces para validar la navegación y el diseño inicial.
 - Estructura preparada para incorporar Supabase más adelante.
 - Configuración compatible con despliegue en Vercel.
 
@@ -34,7 +32,7 @@ Crear una base visual y técnica limpia para organizar workspaces documentales s
 ```txt
 app/          Rutas, layout y estilos globales de Next.js App Router.
 components/   Componentes reutilizables de interfaz.
-lib/          Datos mock y utilidades locales temporales.
+lib/          Datos y utilidades locales temporales.
 types/        Tipos TypeScript compartidos.
 supabase/     Espacio reservado para configuración futura de Supabase.
 ```
@@ -64,16 +62,6 @@ npm run dev
 ```
 
 Abre `http://localhost:3000` en el navegador.
-
-## Rutas mock de Fase 0
-
-- `/`: listado de workspaces.
-- `/workspace/[id]`: vista resumen del workspace.
-- `/workspace/[id]/documents`: placeholder de documentos.
-- `/workspace/[id]/context`: placeholder de contexto.
-- `/workspace/[id]/prompt`: placeholder de prompt.
-- `/workspace/[id]/outputs`: placeholder de outputs.
-- `/workspace/[id]/notes`: placeholder de notas.
 
 ## Scripts
 

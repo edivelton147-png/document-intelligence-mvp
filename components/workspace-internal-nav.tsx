@@ -4,7 +4,7 @@ import type { Workspace } from "@/types/workspace";
 export function WorkspaceInternalNav({ workspace }: { workspace: Workspace }) {
   return (
     <nav className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-5" aria-label="Secciones del workspace">
-      {(workspace.sections ?? []).map((section) => (
+      {workspace.sections.map((section) => (
         <Link
           key={section.id}
           href={`/workspace/${workspace.id}/${section.id}`}
