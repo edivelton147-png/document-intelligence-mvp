@@ -1,6 +1,5 @@
 import { WorkspaceCard } from "@/components/workspace-card";
-import { workspaces } from "@/lib/mock-data";
-import type { Workspace } from "@/types/workspace";
+import { workspaces } from "@/lib/workspaces";
 
 export default function WorkspacesPage() {
   return (
@@ -15,19 +14,19 @@ export default function WorkspacesPage() {
               Inteligencia documental simple, personal y verificable.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600">
-              Fase 0 visual con datos mock/locales. Cada workspace representa un contexto
-              documental distinto, sin Supabase, backend, APIs externas ni automatizaciones.
+              DocuLens empieza como un esqueleto limpio para organizar espacios de trabajo.
+              Todavía no incluye subida de documentos, autenticación, base de datos ni IA externa.
             </p>
           </div>
           <div className="rounded-3xl bg-ink px-6 py-5 text-white">
             <p className="text-sm text-slate-300">Estado del MVP</p>
-            <p className="mt-2 text-2xl font-semibold">Fase 0 visual</p>
+            <p className="mt-2 text-2xl font-semibold">Esqueleto inicial</p>
           </div>
         </div>
       </section>
 
-      <section className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        {workspaces.map((workspace: Workspace) => (
+      <section className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {workspaces.map((workspace) => (
           <WorkspaceCard key={workspace.id} workspace={workspace} />
         ))}
       </section>

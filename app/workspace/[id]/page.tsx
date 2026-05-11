@@ -2,14 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { WorkspaceInternalNav } from "@/components/workspace-internal-nav";
 import { getWorkspaceById, workspaces } from "@/lib/mock-data";
-import type { Workspace } from "@/types/workspace";
 
 export function generateStaticParams() {
   return workspaces.map((workspace) => ({ id: workspace.id }));
 }
 
 export default function WorkspacePage({ params }: { params: { id: string } }) {
-  const workspace: Workspace | undefined = getWorkspaceById(params.id);
+  const workspace = getWorkspaceById(params.id);
 
   if (!workspace) {
     notFound();
@@ -46,9 +45,7 @@ export default function WorkspacePage({ params }: { params: { id: string } }) {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slateblue">
             Resumen del flujo documental
           </p>
-          <p className="mt-3 leading-7 text-slate-700">
-            {workspace.flowSummary}
-          </p>
+          <p className="mt-3 leading-7 text-slate-700">{workspace.documentFlowSummary}</p>
         </div>
       </section>
 

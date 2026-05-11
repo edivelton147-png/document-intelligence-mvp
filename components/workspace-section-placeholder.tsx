@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getWorkspaceById } from "@/lib/mock-data";
-import type { WorkspaceSectionId } from "@/types/workspace";
+import type { WorkspaceSection } from "@/types/workspace";
 
 type WorkspaceSectionPlaceholderProps = {
   workspaceId: string;
-  sectionId: WorkspaceSectionId;
+  sectionId: WorkspaceSection["id"];
 };
 
 export function WorkspaceSectionPlaceholder({
